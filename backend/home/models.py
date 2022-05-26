@@ -7,3 +7,7 @@ class Pet(models.Model):
     name = models.CharField(
         max_length=256,
     )
+    ddww = models.IntegerField(
+        null=True,
+        blank=True,
+    )
