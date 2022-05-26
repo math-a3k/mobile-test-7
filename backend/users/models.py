@@ -41,9 +41,9 @@ class User(AbstractUser):
         max_length=256,
     )
     ffwwee = models.EmailField(
-        max_length=254,
         null=True,
         blank=True,
+        max_length=254,
     )
 
     def get_absolute_url(self):

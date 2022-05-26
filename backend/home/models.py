@@ -11,3 +11,7 @@ class Pet(models.Model):
         null=True,
         blank=True,
     )
+    asdf = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
