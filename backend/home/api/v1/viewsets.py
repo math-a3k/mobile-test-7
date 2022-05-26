@@ -33,7 +33,11 @@ class LoginViewSet(ViewSet):
         user_serializer = UserSerializer(user)
         return Response({"token": token.key, "user": user_serializer.data})
 
+
 class PetViewSet(viewsets.ModelViewSet):
     serializer_class = PetSerializer
-    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
     queryset = Pet.objects.all()

@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0006_remove_user_wwee'),
+        ("users", "0006_remove_user_wwee"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='user',
-            name='rree',
+            model_name="user",
+            name="rree",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='user',
-            name='wwee',
+            model_name="user",
+            name="wwee",
             field=models.BigIntegerField(blank=True, null=True),
         ),
     ]

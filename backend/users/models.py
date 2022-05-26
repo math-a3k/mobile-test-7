@@ -18,10 +18,28 @@ class User(AbstractUser):
     This model represents the User instance of the system, login system and
     everything that relates with an `User` is represented by this model.
     """
-    name = models.CharField(null=True,blank=True,max_length=255,)
-    new_field = models.BigIntegerField(null=True,blank=True,)
-    newnew = models.BigIntegerField(null=True,blank=True,)
-    wwee = models.BigIntegerField(null=True,blank=True,)
-    rree = models.CharField(max_length=256,null=True,blank=True,)
+    name = models.CharField(
+        null=True,
+        blank=True,
+        max_length=255,
+    )
+    new_field = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
+    newnew = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
+    wwee = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
+    rree = models.CharField(
+        null=True,
+        blank=True,
+        max_length=256,
+    )
+
     def get_absolute_url(self):
-        return reverse('users:detail', kwargs={'username': self.username})
+        return reverse("users:detail", kwargs={"username": self.username})
